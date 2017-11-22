@@ -1,0 +1,26 @@
+{
+  "name": "webpack-build-exercise",
+  "version": "1.0.0",
+  "description": "webpack",
+  "main": "index.js",
+  "scripts": {
+    "build:log": "yarn build -- --env.foo=1 --env.bar=2",
+    "debug": "yarn build -- --env.debug=1",
+    "watch": "yarn build -- --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenchenalex/webpack-build-exercise.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "alex",
+  "license": "MIT",
+  "devDependencies": {
+    "file-loader": "^1.1.5",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
