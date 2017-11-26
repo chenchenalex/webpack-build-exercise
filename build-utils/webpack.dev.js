@@ -1,11 +1,12 @@
 module.exports = {
-  devtool: 'source-map',
-  module: {
-    rules: [
-      {
-        test: /\.jpe?g$/,
-        use: ['file-loader']
-      }
-    ],
-  },
+  devtool: 'eval-source-map',
+  plugins: [
+    {
+      test: /\.css/,
+      use: [
+        'style-loader',
+        'css-loader'
+      ]
+    }
+  ]
 };
