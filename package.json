@@ -9,6 +9,7 @@
     "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js",
     "watch": "yarn build -- --watch",
     "dev": "yarn build -- --env.env=dev",
+    "prod": "yarn build -- --env.env=prod",
     "webpack-dev-server": "webpack-dev-server --port=9000 --hot",
     "build": "webpack"
   },
@@ -24,7 +25,9 @@
   "dependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
-    "webpack": "^3.8.1"
+    "uglifyjs-webpack-plugin": "beta",
+    "webpack": "^3.8.1",
+    "compression-webpack-plugin": "^1.0.1"
   },
   "devDependencies": {
     "css-loader": "^0.28.7",

@@ -1,4 +1,6 @@
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -14,6 +16,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextWebpackPlugin('style.css')
+    new ExtractTextWebpackPlugin('style.css'),
+    new UglifyWebpackPlugin({
+      sourceMap: true
+    }),
+    new CompressionWebpackPlugin({
+      test: /\.(js|html|css)$/,
+      limit: 10240,
+      minRatio: 0.8
+    })
   ]
 };
